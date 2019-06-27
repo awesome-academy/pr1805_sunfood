@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_24_133926) do
+ActiveRecord::Schema.define(version: 2019_06_24_135746) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer "phone"
@@ -44,6 +44,8 @@ ActiveRecord::Schema.define(version: 2019_06_24_133926) do
     t.integer "sender_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
+    t.index ["sender_id"], name: "index_conversations_on_sender_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -55,7 +57,7 @@ ActiveRecord::Schema.define(version: 2019_06_24_133926) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.text "content"
+    t.text "body"
     t.integer "conversation_id"
     t.integer "user_id"
     t.datetime "created_at", null: false

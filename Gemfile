@@ -24,6 +24,9 @@ gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 gem "adminlte-rails"
 gem "toastr-rails"
+gem "faker"
+gem "private_pub"
+gem "thin"
 gem "bootsnap", ">= 1.1.0", require: false
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
