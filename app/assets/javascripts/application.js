@@ -10,10 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
 //= require activestorage
-//= require turbolinks
+//= require jquery
+//= require rails-ujs
 //= require lib/jquery
+//= require chat
+//= require private_pub
+//= require turbolinks
 //= require lib/bootstrap.min
 //= require lib/owl.carousel.min
 //= require lib/webslidemenu
@@ -22,3 +25,5 @@
 //= require lib/load_review
 //= require lib/cart
 //= require toastr
+//= require users
+

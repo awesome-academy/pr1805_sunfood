@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   	root "static_pages#home"
   	resources :products
     resources :product_orders
-    resources :shops, only: [:index]
+    resources :shops, only: [:index, :show]
     namespace :shops do
       resources :products
       resources :categories
@@ -14,6 +14,11 @@ Rails.application.routes.draw do
       root "dashboard#index"
     end
 
+    resources :conversations do
+      resources :messages
+    end
+
+    resources :users
     resources :addresses
     resources :carts
     resources :checkouts
